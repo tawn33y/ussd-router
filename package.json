@@ -1,0 +1,78 @@
+{
+  "name": "ussd-nav-util",
+  "version": "0.1.0",
+  "description": "A util for managing navigation in USSD applications.",
+  "scripts": {
+    "build": "npm-run-all clean ts-build --parallel watch:build watch:server --print-label",
+    "clean": "rimraf dist",
+    "ts-build": "tsc",
+    "watch:build": "tsc --watch",
+    "watch:server": "nodemon './dist/index.js' --watch './dist'",
+    "test": "mocha -r ts-node/register test/**/*.test.ts",
+    "nyc": "npm run clean-nyc-dir && nyc npm run test",
+    "clean-nyc-dir": "rimraf .nyc_output && rimraf coverage",
+    "lint": "eslint --ext .ts ./",
+    "pre-commit-message": "echo 'Please wait, running pre-commit checks...' && exit 0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pre-commit-message && npm run lint && npm run nyc"
+    }
+  },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "include": [
+      "**/src**/",
+      "**/dist**/"
+    ],
+    "exclude": [
+      "**/*.d.ts",
+      "**/test**/"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "all": true 
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.5",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.11",
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "husky": "^3.1.0",
+    "mocha": "^6.2.2",
+    "nodemon": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "nyc": "^14.1.1",
+    "rimraf": "^3.0.0",
+    "ts-node": "^8.5.2",
+    "typescript": "^3.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tawn33y/ussd-nav-util.git"
+  },
+  "keywords": [
+    "ussd",
+    "navigation",
+    "util",
+    "africastalking",
+    "africas talking",
+    "sdk"
+  ],
+  "author": "K Tony <tawn33y@gmail.com> (https://twitter.com/tawn33y)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/tawn33y/ussd-nav-util/issues"
+  },
+  "homepage": "https://github.com/tawn33y/ussd-nav-util"
+}
