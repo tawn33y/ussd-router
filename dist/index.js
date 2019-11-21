@@ -15,7 +15,7 @@ exports.goBack = function (str) {
 exports.goToHome = function (str) {
     var updatedStr = str;
     var strArray = str.split('*');
-    for (var i = strArray.length; i >= 0; i--) {
+    for (var i = strArray.length; i >= 0; i -= 1) {
         if (strArray[i] === '0') {
             updatedStr = strArray.slice(i + 1).join('*');
             break;
