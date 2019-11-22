@@ -61,4 +61,7 @@ npm run lint
 
 # test
 npm test
+
+# test w/ coverage
+npm run nyc
 ```
