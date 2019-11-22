@@ -4,7 +4,7 @@
 
 See also:
 
-- [the blog for a detailed description](https://gist.github.com/tawn33y/6eab1a00ad33e87e56966b5c09d07df4).
+- [the blog for a detailed description](https://medium.com/@tawn33y/a-free-utility-for-easy-routing-in-ussd-applications-fb4f446bcdf7).
 - [the Github Gist for the algorithm used](https://gist.github.com/tawn33y/6eab1a00ad33e87e56966b5c09d07df4).
 
 ## Install
