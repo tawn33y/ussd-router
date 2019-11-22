@@ -1,6 +1,6 @@
 {
   "name": "ussd-router",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A util for managing routing in USSD applications.",
   "scripts": {
     "build": "npm-run-all clean ts-build --parallel watch:build watch:server --print-label",
