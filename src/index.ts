@@ -1,30 +1,35 @@
-export const goBack = (str: string): string => {
-  const strArray = str.split('*');
+export const goBack = (str: string, keyword: string = '00'): string => {
+  const strArray: string[] = str.split('*');
+  let newStrArray: string[] = [];
 
-  return strArray.reduce((acc, curr) => {
-    if (curr === '00') {
-      return acc.split('*').slice(0, -1).join('*');
+  for (let i = 0; i < strArray.length; i += 1) {
+    if (strArray[i] === keyword) {
+      newStrArray = newStrArray.slice(0, -1); // remove the string coming before the keyword
+    } else {
+      newStrArray = [
+        ...newStrArray,
+        strArray[i],
+      ];
     }
+  }
 
-    if (acc === '') {
-      return curr;
-    }
-    return `${acc}*${curr}`;
-  }, '');
+  return newStrArray.join('*');
 };
 
-export const goToHome = (str: string): string => {
-  let updatedStr = str;
+export const goToHome = (str: string, keyword: string = '0'): string => {
   const strArray = str.split('*');
+  let newStr = str;
 
   for (let i = strArray.length; i >= 0; i -= 1) {
-    if (strArray[i] === '0') {
-      updatedStr = strArray.slice(i + 1).join('*');
+    if (strArray[i] === keyword) {
+      newStr = strArray.slice(i + 1).join('*'); // remove everything preceding keyword (keyword included)
       break;
     }
   }
 
-  return updatedStr;
+  return newStr;
 };
 
-export const ussdNavUtil = (str: string): string => goBack(goToHome(str));
+export const ussdRouter = (str: string,
+  goToHomeKeyword: string = '0',
+  goBackKeyword: string = '00'): string => goBack(goToHome(str, goToHomeKeyword), goBackKeyword);

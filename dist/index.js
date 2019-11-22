@@ -23,5 +23,5 @@ exports.goToHome = function (str) {
     }
     return updatedStr;
 };
-exports.ussdNavUtil = function (str) { return exports.goBack(exports.goToHome(str)); };
+exports.ussdRouter = function (str) { return exports.goBack(exports.goToHome(str)); };
 //# sourceMappingURL=index.js.map

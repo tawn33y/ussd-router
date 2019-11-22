@@ -20,7 +20,7 @@ export const goBackFixtures = [
   { input: '00*1', output: '1' },
 ];
 
-export const ussdNavUtilFixtures = [
+export const ussdRouterFixtures = [
   ...goToHomeFixtures,
   ...goBackFixtures,
   { input: '544*1*1*0*2*3*00', output: '2' },

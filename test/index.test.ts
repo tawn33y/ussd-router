@@ -1,8 +1,8 @@
-import { goToHome, goBack, ussdNavUtil } from '../src';
-import { goToHomeFixtures, goBackFixtures, ussdNavUtilFixtures } from './fixtures';
+import { goToHome, goBack, ussdRouter } from '../src';
+import { goToHomeFixtures, goBackFixtures, ussdRouterFixtures } from './fixtures';
 import { testArray } from './utils';
 
-describe('ussd-nav-util', () => {
+describe('ussd-router', () => {
   describe('goToHome()', () => {
     testArray(goToHomeFixtures, goToHome);
   });
@@ -11,7 +11,7 @@ describe('ussd-nav-util', () => {
     testArray(goBackFixtures, goBack);
   });
 
-  describe('ussdNavUtil()', () => {
-    testArray(ussdNavUtilFixtures, ussdNavUtil);
+  describe('ussdRouter()', () => {
+    testArray(ussdRouterFixtures, ussdRouter);
   });
 });

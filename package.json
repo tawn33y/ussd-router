@@ -1,7 +1,7 @@
 {
-  "name": "ussd-nav-util",
+  "name": "ussd-router",
   "version": "0.1.0",
-  "description": "A util for managing navigation in USSD applications.",
+  "description": "A util for managing routing in USSD applications.",
   "scripts": {
     "build": "npm-run-all clean ts-build --parallel watch:build watch:server --print-label",
     "clean": "rimraf dist",
@@ -41,7 +41,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tawn33y/ussd-nav-util.git"
+    "url": "git+https://github.com/tawn33y/ussd-router.git"
   },
   "keywords": [
     "ussd",
@@ -54,7 +54,7 @@
   "author": "K Tony <tawn33y@gmail.com> (https://twitter.com/tawn33y)",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/tawn33y/ussd-nav-util/issues"
+    "url": "https://github.com/tawn33y/ussd-router/issues"
   },
-  "homepage": "https://github.com/tawn33y/ussd-nav-util"
+  "homepage": "https://github.com/tawn33y/ussd-router"
 }
