@@ -1,4 +1,4 @@
-import { goToHome, goBack, ussdRouter } from '../src';
+import { goToHome, goBack, ussdRouter } from '../dist';
 import { goToHomeFixtures, goBackFixtures, ussdRouterFixtures } from './fixtures';
 import { testArray } from './utils';
 

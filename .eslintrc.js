@@ -5,7 +5,7 @@ module.exports = {
     mocha: true,
   },
   extends: [
-    'airbnb-base',
+    'airbnb-typescript/base',
   ],
   globals: {
     Atomics: 'readonly',
