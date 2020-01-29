@@ -22,6 +22,7 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm ci
+        npm run build
         npm run lint
         npm run ts-check
         npm t
