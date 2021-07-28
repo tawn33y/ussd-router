@@ -1,4 +1,4 @@
-name: run tests, lint, etc
+name: build, run linter & tests
 
 on: [push]
 
@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [10.x, 12.x, 14.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -19,7 +19,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: npm install, build, and test
+    - name: npm install, build, run linter and tests
       run: |
         npm ci
         npm run build
