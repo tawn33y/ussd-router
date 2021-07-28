@@ -1,5 +1,10 @@
 # ussd-router
 
+[![build, run linter & tests](https://github.com/tawn33y/ussd-router/actions/workflows/main.yml/badge.svg)](https://github.com/tawn33y/ussd-router/actions/workflows/main.yml)
+![npm](https://img.shields.io/npm/v/ussd-router)
+![npm bundle size](https://img.shields.io/bundlephobia/min/ussd-router)
+![npm](https://img.shields.io/npm/dw/ussd-router)
+
 `ussd-router` is a free utility for easy routing in USSD applications.
 
 See also:

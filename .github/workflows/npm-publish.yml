@@ -24,6 +24,16 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+    - name: npm install, build, run linter and tests
+      run: |
+        npm ci
+        npm run build
+        npm run lint
+        npm run ts-check
+        npm t
+      env:
+        CI: true
+
     - name: npm publish
       run: |
         npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}
