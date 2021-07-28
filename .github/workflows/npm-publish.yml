@@ -34,7 +34,6 @@ jobs:
       env:
         CI: true
 
-    - name: npm publish
-      run: |
-        npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}
-        npm publish
+    - uses: JS-DevTools/npm-publish@v1
+      with:
+        token: ${{ secrets.NPM_AUTH_TOKEN }}
