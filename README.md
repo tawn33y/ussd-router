@@ -7,16 +7,16 @@
 
 `ussd-router` is a free utility for easy routing in USSD applications.
 
-See also:
-
-- [the blog for a detailed description](https://dev.to/tawn33y/a-free-utility-for-easy-routing-in-ussd-applications-3b6j).
-- [the source code for the algorithm used](https://github.com/tawn33y/ussd-router/blob/main/src/index.ts).
-
 ## Install
 
 ```bash
 npm i ussd-router
 ```
+
+See also:
+
+- [the blog for a detailed description](https://dev.to/tawn33y/a-free-utility-for-easy-routing-in-ussd-applications-3b6j).
+- [the source code for the algorithm used](https://github.com/tawn33y/ussd-router/blob/main/src/index.ts).
 
 ## Example usage (simple)
 
